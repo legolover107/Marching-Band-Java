@@ -1,0 +1,1 @@
+In 2024, I programmed the first song of my marching band's halftime show, I'm Gonna Be (500 Miles) by The Proclaimers, in Python using Turtle. In 2025, I took AP Computer Science A, and decided to do the same thing again with Java.
