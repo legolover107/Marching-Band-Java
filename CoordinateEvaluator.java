@@ -107,8 +107,12 @@ public class CoordinateEvaluator {
         return yIntToString.get(yCoord);
     }
 
-    public static void main(String[] args) {
-        CoordinateEvaluator coordEval = new CoordinateEvaluator();
-        System.out.println(coordEval.xIntToString + "\n\n" + coordEval.xStringToInt);
+    public boolean testPrint(boolean test) {
+        if (test) {
+            CoordinateEvaluator coordEval = new CoordinateEvaluator();
+            System.out.println(coordEval.xIntToString + "\n\n" + coordEval.xStringToInt);
+        }
+        return test;
     }
+
 }

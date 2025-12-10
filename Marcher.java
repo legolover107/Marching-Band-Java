@@ -5,9 +5,14 @@ public class Marcher {
     private String displayName = null;
     private ArrayList<int[]> coordinateList = new ArrayList<>();
     private CoordinateEvaluator coordEval = new CoordinateEvaluator();
-
+    /**
+     * Constructs a Marcher with no name or coordinates
+     */
     public Marcher() {}
-    
+    /**
+     * constructs a Marcher with specified name
+     * @param name the marchers name to be displayed
+     */
     public Marcher(String name) {
         displayName = name;
     }

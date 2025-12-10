@@ -3,7 +3,9 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
-
+/**
+ * A text based, interactive Marching Band dot card maker
+ */
 public class InteractiveMarchingBandMaker {
 
     private Scanner scan = new Scanner(System.in);
@@ -12,6 +14,13 @@ public class InteractiveMarchingBandMaker {
     private ArrayList<String[]> currentEditorLevel = new ArrayList<>();
     private CoordinateEvaluator coordEval = new CoordinateEvaluator();
 
+    public static void main(String[] args) {
+        InteractiveMarchingBandMaker bandMaker = new InteractiveMarchingBandMaker("CHS 2025.bnd");
+        bandMaker.evaluateInput("");
+    }
+    /**
+     * Guides you through making a Marching Band
+     */
     public InteractiveMarchingBandMaker() {
         System.out.print("Hello! Welcome to the Custom Marching Band Show Simulator. \n\n" + //
                          "Would you like to create a new band (n) or edit an exsisting one (e)?\t");
@@ -23,8 +32,7 @@ public class InteractiveMarchingBandMaker {
             System.out.print("Please enter your band name (example: \"CHS 2025\"):\t");
             playerMarchingBand = new MarchingBand(scan.nextLine());
             currentEditorLevel.add("band, 0".split(", "));
-            System.out.print("Please enter the file path:\t");
-            filePath = scan.nextLine();
+            filePath = playerMarchingBand.getName() + ".bnd";
             System.out.print("Let's create our first section. \nPlease enter your section name (example: \"Alto Mellos\"):\t");
             playerMarchingBand.addSection(new Section(scan.nextLine()));
             System.out.print("Now let's add your first marcher. Please enter their name:\t");
@@ -47,14 +55,16 @@ public class InteractiveMarchingBandMaker {
         evaluateInput("");
 
     }
-
-    public InteractiveMarchingBandMaker(String fileName) {
-        filePath = fileName;
-        readFromFile(fileName);
-        evaluateInput("");
+    /**
+     * Saves the data from the specified file
+     * @param fileName file to be evaluated
+     */
+    public InteractiveMarchingBandMaker(String filePath) {
+        this.filePath = filePath;
+        readFromFile(this.filePath);
     }
 
-    private boolean evaluateInput(String inputString) {
+    public boolean evaluateInput(String inputString) {
         String input = inputString;
         String currentlyEditing = currentEditorLevel.get(currentEditorLevel.size() - 1)[0];
         int currentlyEditingIndex = Integer.parseInt(currentEditorLevel.get(currentEditorLevel.size() - 1)[1]);
