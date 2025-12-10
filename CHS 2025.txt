@@ -1,0 +1,90 @@
+CHS 2025:
+
+	Trumpets:
+
+		T1:
+			
+		T2:
+			
+		T3:
+			
+		T4:
+			
+		T5:
+			
+		T6:
+			
+		T7:
+			
+		T8:
+			
+		T9:
+			
+		T10:
+			
+	Alto Mellos:
+
+		M1:
+			
+		M2:
+			
+		M3:
+			
+		M4:
+			
+		M5:
+			Side 2: 1 step outside 50 yd ln; 2 steps behind front hash	Side 1: On 70 yd ln; 4 steps in front of front hash	
+		A1:
+			
+		A2:
+			
+		A3:
+			
+	Flutes:
+
+		F1:
+			
+		F2:
+			
+		F3:
+			
+		F4:
+			
+		F5:
+			
+		F6:
+			
+		F7:
+			
+		F8:
+			
+		F9:
+			
+		F10:
+			
+		F11:
+			
+	Clarinets:
+
+		C1:
+			
+		C2:
+			
+		C3:
+			
+		C4:
+			
+		C5:
+			
+		C6:
+			
+		C7:
+			
+		C8:
+			
+		C9:
+			
+		C10:
+			
+		C11:
+			
