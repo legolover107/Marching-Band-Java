@@ -93,9 +93,7 @@ public class InteractiveMarchingBandMaker {
                         System.out.print("Out of bounds. Try again:\t");
                         i = Integer.parseInt(scan.nextLine());
                     }
-                    System.out.println("Please enter the new coordinate with the format \"x, y\".");
-                    String newCoord = scan.nextLine();
-                    tempMarcher.editCoordinate(i, toIntArray(newCoord));
+                    tempMarcher.editCoordinate(i, makeCoord());
                 } else if (input.equals("r")) {
                     System.out.print("Please enter the index of the coordinate you would like to remove:\t");
                     int i = Integer.parseInt(scan.nextLine());
@@ -286,6 +284,14 @@ public class InteractiveMarchingBandMaker {
         System.out.print("What yard line is it off of?\t");
         input = scan.nextLine();
         coord[0] *= ((50 - Integer.parseInt(input)) / 5) * 8;
+        System.out.print("Is it on (o), inside (i), or outside (u) the " + input + " yard line?\t");
+        if (scan.nextLine().equals("i")) {
+            System.out.print("How many steps off?\t");
+            coord[0] -= scan.nextInt() * Integer.signum(coord[0]);
+        } else if (scan.nextLine().equals("u")) {
+            System.out.print("How many steps off?\t");
+            coord[0] += scan.nextInt() * Integer.signum(coord[0]);
+        }
         System.out.print("Is it off of the back sideline (bs), back hash (bh), front hash (fh), or front sideline (fs)?\t");
         input = scan.nextLine();
         if (input.equals("bs")) {

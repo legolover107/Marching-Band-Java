@@ -19,7 +19,7 @@ public class CoordinateEvaluator {
             }
             
             if (Math.abs(x) % 8 == 0) {
-                tempString += "On " + (50 - ((x / 8) * 5)) + " yd ln";
+                tempString += "On " + (50 - ((Math.abs(x) / 8) * 5)) + " yd ln";
             } else if (Math.abs(x) % 8 <= 4) {
                 String isPlural = "";
                 if ((Math.abs(x) % 8) != 1) {
